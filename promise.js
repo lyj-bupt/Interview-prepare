@@ -1,3 +1,4 @@
+// Promise的resolve方法
 function buy(){
     console.log("开始买笔");
     var p = new Promise(function(resolve,reject){
@@ -32,6 +33,7 @@ buy().then(work).then(out).then(function(data){
     console.log(data);
 });
 
+// Promise的reject方法
 function rebuy() {
     console.log("开始买笔");
     var q = new Promise(function(resolve,reject){
@@ -56,6 +58,7 @@ rebuy().then(rework,function(data){
     console.log(data);
 })
 
+// all方法
 function cutUp() {
     console.log("挑作业本");
     var r = new Promise(function(resolve,reject){
@@ -81,6 +84,7 @@ Promise.all([cutUp(),boil()]).then(function(results){
     console.log(results);
 })
 
+// race方法
 function requestImg() {
     var s = new Promise(function(resolve,reject){
         var img = new Image();
