@@ -1,0 +1,91 @@
+/* flex实现三栏布局，两端宽度固定，中间自适应 */
+.container1{
+    display: flex;
+}
+.container1 .left1{
+    background-color: black;
+    width: 300px;
+    height: 100px;
+}
+.container1 .center1{
+    background-color: blanchedalmond;
+    flex: 1;
+    height: 100px;
+}
+.container1 .right1{
+    height: 100px;
+    background-color: blue;
+    width: 300px;
+}
+/* 浮动实现三栏布局 */
+.left2{
+    float: left;
+    width: 300px;
+    height: 100px;
+    background-color: blue;
+}
+.right2{
+    float: right;
+    width: 300px;
+    height: 100px;
+    background-color: black;
+}
+.center2{
+    margin-left: 300px;
+    margin-right: 300px;
+    height: 100px;
+    background-color:red;
+}
+/* position实现三栏布局 */
+.contain3{
+    position: relative;
+}
+.contain3 .left3{
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: 100px;
+    background-color:red;
+}
+.contain3 .center3{
+    position: absolute;
+    left: 300px;
+    right: 300px;
+    height: 100px;
+    background-color:black;
+}
+.contain3 .right3{
+    position: absolute;
+    right: 0;
+    width: 300px;
+    height: 100px;
+    background-color:blue;
+}
+/* table实现三栏布局 */
+.contain4{
+    display: table;
+    width: 100%;
+}
+.contain4 .left4{
+    display: table-cell;
+    width: 300px;
+    height: 100px;
+    background-color:blue;
+}
+.contain4 .center4{
+    display: table-cell;
+    height: 100px;
+    background-color:black;
+}
+.contain4 .right4{
+    display: table-cell;
+    width: 300px;
+    height: 100px;
+    background-color:red;
+}
+.contain5{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 100px;
+    grid-template-columns: 300px auto 300px;
+}
